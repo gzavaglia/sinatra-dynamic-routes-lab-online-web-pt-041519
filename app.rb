@@ -8,7 +8,7 @@ class App < Sinatra::Base
   end
   
   get '/square/:number' do
-    @number = params[:number]
+    @number = params[:number].to_i
     erb :square
   end
   
@@ -28,8 +28,8 @@ class App < Sinatra::Base
   end
   
   get '/:operation/:number1/:number2' do 
-    @number1 = params [:number1]
-    @number2 = params[:number2]
+    @number1 = params [:number1].to_i
+    @number2 = params[:number2].to_i
     @operation = params[:operation]
   end
 end
