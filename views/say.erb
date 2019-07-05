@@ -1,5 +1,5 @@
 <%= phrase_array = [] %>
-<%= @number2.times do |words|
-  phrase_array << words
-  %>
-<%= "#{@name.reverse}" %>
+<%= @number2.times do 
+  phrase_array << @phrase
+end %>
+<%= "#{phrase_array.join}" %>
